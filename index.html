@@ -18,7 +18,27 @@
                 to see my dynamically bound title!
             </span>
         </div>
+
+        <div id='app-3'>
+            <span v-if='seen'>
+                Now You See Me!
+            </span>
+        </div>
+
+        <div id='app-4'>
+            <ol>
+                <li v-for='todo in todos'>
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id='app-5'>
+            <p>{{ message }}</p>
+            <input placeholder='Type Something...' v-model='message'>
+        </div>
     </body>
+
     <script>
         let app = new Vue({
             el: '#app',
@@ -32,6 +52,34 @@
             el: '#app-2',
             data: {
                 message: 'You loaded this page on' + new Date().toLocaleString()
+            }
+        })
+    </script>
+    <script>
+        let app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: true
+            }
+        })
+    </script>
+    <script>
+        let app4 = new Vue ({
+            el: '#app-4',
+            data: {
+                todos: [
+                    { text: 'Learn JavaScript' },
+                    { text: 'Learn Vue' },
+                    { text: 'Build something awesome' }
+                ]
+            }
+        })
+    </script>
+    <script>
+        let app5 = new Vue({
+            el: '#app-5',
+            data: {
+                message: ''
             }
         })
     </script>
