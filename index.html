@@ -6,13 +6,27 @@
         <title>Vue Practice</title>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+       
     </head>
     <body>
+
         <div id='app'>
-            <h1>{{ message }}</h1>
+            <h3>Transactions</h3>
+            <p>
+                <ul>
+                    <transaction-list
+                    v-for="transaction in transactionList"
+                    v-bind:transaction="transaction"
+                    v-bind:key="transaction.id"
+                    >
+                    </transaction-list>
+                </ul>
+            </p>
         </div>
 
-        <div id='app-2'>
+        <script src='index.js'></script>
+
+        <!-- <div id='app-2'>
             <span v-bind:title='message'>
                 Hover your mouse over me for a few seconds
                 to see my dynamically bound title!
@@ -36,10 +50,10 @@
         <div id='app-5'>
             <p>{{ message }}</p>
             <input placeholder='Type Something...' v-model='message'>
-        </div>
+        </div> -->
     </body>
 
-    <script>
+    <!-- <script>
         let app = new Vue({
             el: '#app',
             data: {
@@ -82,5 +96,5 @@
                 message: ''
             }
         })
-    </script>
+    </script> -->
 </html>
