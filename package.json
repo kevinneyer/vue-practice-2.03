@@ -1,0 +1,25 @@
+{
+  "name": "vuepractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.16.3",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinneyer/vue-practice-2.03.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinneyer/vue-practice-2.03/issues"
+  },
+  "homepage": "https://github.com/kevinneyer/vue-practice-2.03#readme"
+}

@@ -1,0 +1,29 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "location": "Starbucks",
+            "amount": 5.00
+        },
+        {
+            "id": 2,
+            "location": "Lowes",
+            "amount": 15.00
+        },
+        {
+            "id": 3,
+            "location": "Target",
+            "amount": 75.00
+        },
+        {
+            "id": 4,
+            "location": "Wine Store",
+            "amount": 25.00
+        },
+        {
+            "id": 5,
+            "location": "Trader Joes",
+            "amount": 30.00
+        }
+    ]
+}
