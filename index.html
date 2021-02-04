@@ -12,89 +12,24 @@
 
         <div id='app'>
             <h3>Transactions</h3>
-            <p>
-                <ul>
+            <div class='transaction-list'>
+                <!-- <table >
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Amount</th>
+                        <th>Remove</th>
+                    </tr> -->
                     <transaction-list
                     v-for="transaction in transactionList"
                     v-bind:transaction="transaction"
                     v-bind:key="transaction.id"
                     >
                     </transaction-list>
-                </ul>
-            </p>
+                <!-- </table> -->
+            </div>  
         </div>
 
         <script src='index.js'></script>
-
-        <!-- <div id='app-2'>
-            <span v-bind:title='message'>
-                Hover your mouse over me for a few seconds
-                to see my dynamically bound title!
-            </span>
-        </div>
-
-        <div id='app-3'>
-            <span v-if='seen'>
-                Now You See Me!
-            </span>
-        </div>
-
-        <div id='app-4'>
-            <ol>
-                <li v-for='todo in todos'>
-                    {{ todo.text }}
-                </li>
-            </ol>
-        </div>
-
-        <div id='app-5'>
-            <p>{{ message }}</p>
-            <input placeholder='Type Something...' v-model='message'>
-        </div> -->
-    </body>
-
-    <!-- <script>
-        let app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello, World!'
-            }
-        })
-    </script>
-    <script>
-            let app2 = new Vue({
-            el: '#app-2',
-            data: {
-                message: 'You loaded this page on' + new Date().toLocaleString()
-            }
-        })
-    </script>
-    <script>
-        let app3 = new Vue({
-            el: '#app-3',
-            data: {
-                seen: true
-            }
-        })
-    </script>
-    <script>
-        let app4 = new Vue ({
-            el: '#app-4',
-            data: {
-                todos: [
-                    { text: 'Learn JavaScript' },
-                    { text: 'Learn Vue' },
-                    { text: 'Build something awesome' }
-                ]
-            }
-        })
-    </script>
-    <script>
-        let app5 = new Vue({
-            el: '#app-5',
-            data: {
-                message: ''
-            }
-        })
-    </script> -->
+    </body> 
 </html>
