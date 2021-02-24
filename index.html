@@ -13,21 +13,14 @@
         <div id='app'>
             <h3>Transactions</h3>
             <div class='transaction-list'>
-                <!-- <table >
-                    <tr>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Amount</th>
-                        <th>Remove</th>
-                    </tr> -->
                     <transaction-list
                     v-for="transaction in transactionList"
                     v-bind:transaction="transaction"
                     v-bind:key="transaction.id"
                     >
                     </transaction-list>
-                <!-- </table> -->
             </div>  
+            <counter></counter>
         </div>
 
         <script src='index.js'></script>

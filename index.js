@@ -14,19 +14,22 @@ const getTransactions = () => {
 Vue.component('transaction-list', {
     props: ['transaction'],
     template: `
-        <table style="width: 100%">
-        <tr>
-            <th>Date</th>
-            <th>Location</th>
-            <th>Amount</th>
-            <th>Remove</th>
-        </tr>
-        <tr>
-            <td v-html='transaction.date'></td>
-            <td v-html='transaction.location'></td>
-            <td v-html='transaction.amount'></td>
-        </tr>
-        </table>
+        <p> {{ transaction.date }} {{ transaction.location }} {{transaction.amount }} <button>Delete</button></p>
+    `
+})
+
+Vue.component('counter', { 
+    data: function() {
+        return {
+            count: 0
+        }
+    },
+    template: `
+    <div class='counter'>
+        <span> {{ count }}</span>
+        <button v-on:click='count += 1'>Add</button>
+        <button v-on:click=' count -= 1'>Subtract</button>
+    </div>
     `
 })
 
@@ -40,5 +43,12 @@ let app = new Vue({
     },
     data:{
         transactionList: transactions
+    },
+    methods: {
+        addTransaction: function() {
+            fetch('http://localhost:3000/transactions', {
+    
+            })
+        }
     }
 })
